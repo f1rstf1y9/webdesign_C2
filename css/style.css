@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+
+/* 레이아웃 */
+.container {
+  /* border: 1px solid #000; */
+  width: 1000px;
+}
+.container > div {
+  float: left;
+  height: 650px;
+}
+.left { width: 200px; }
+header {}
+header > div {}
+.header-logo {
+  height: 100px;
+}
+.navi {
+  height: 550px;
+  background-color: burlywood;;
+  padding-top: 5px;
+}
+
+.right { width: 800px; }
+.right > div {
+
+}
+.slide {}
+.slide > div {
+  height: 350px;
+}
+.items {
+  overflow: hidden;
+}
+.items > div {
+  height: 200px;
+  float: left;
+}
+.news {
+  width: 300px;
+}
+.gallery {
+  width: 300px;
+}
+.shortcut {
+  width: 200px;
+}
+footer {
+  background-color: bisque;
+  overflow: hidden;
+}
+footer > div {
+  height: 100px;
+  float: left;
+}
+.copyright {
+  width: 650px;
+}
+.footer-items {
+  width: 150px;
+}
+.footer-items > div {
+  height: 50px;
+}
+
+/* 모듈 외 */
+.header-logo {
+  line-height: 125px;
+}
+.shortcut img {
+  width: 90%;
+  margin: 10px;
+}
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+.sns {
+  padding-top:10px;
+  text-align: center;
+}
+.sns a {
+  display: inline;
+}
+.familysite {
+  text-align: center;
+  line-height: 40px;
+}
+
+/* 슬라이드 */
+.slide { 
+  position: relative; 
+}
+.slide > div a { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: slide 10s linear infinite;
+}
+
+.slide div a:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide div a:nth-child(2) {
+  animation-delay: 3.5s;
+}
+.slide div a:nth-child(3) {
+  animation-delay: 7s;
+}
+
+@keyframes slide {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 탭메뉴 */
+.tab-inner, .gallery-inner {
+  width: 95%;
+  padding: 10px 5px;
+  margin: auto;
+}
+.tab-inner .btn a, .gallery-inner .btn a {
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  background-color: bisque;
+  margin-bottom : -1px;
+}
+.gallery-inner .btn a {
+  background-color: burlywood;
+}
+.tab-inner .tab, .gallery-inner .tab {
+  border: 1px solid #000;
+}
+
+.tab-inner .tab a {
+  display: block;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  padding: 5px 10px;
+  
+}
+.tab-inner .tab a:last-child {
+  border-bottom: none;
+}
+.tab-inner .tab a b {
+  float: right;
+  text-align: right;
+  width: 30%;
+}
+.tab-inner .tab a em {
+  float: left;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gallery-inner .tab {
+  padding: 32px 10px;
+  text-align: center;
+}
+.gallery-inner img {
+  display: inline-block;
+  width: 80px;
+}
+
+/* 메뉴 */
+.menu {
+  text-align: center;
+  margin: 10px;
+}
+.menu li {}
+.menu li > a {
+  background-color: bisque;
+  display: block;
+  padding: 10px;
+}
+.menu li:hover > a {
+  background-color: chocolate;
+  color: #ffffff;
+}
+.sub-menu {
+  background-color: burlywood;
+  display: none;
+}
+.sub-menu a {
+  display: block;
+  padding: 5px;
+}
+.sub-menu a:hover {
+  background-color: chocolate;
+  color: #ffffff;
+}
+
+/* 모달 */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px 30px;
+}
+.close-modal {
+  border: 1px solid #000;
+  padding: 5px;
+  float: right;
+}
